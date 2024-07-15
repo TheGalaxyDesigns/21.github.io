@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    outline: none;
+}
+body{
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    justify-content: center;
+    height: 100vh;
+    font-family: electrolize;
+}
+
+.episodes a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.about a, .contact a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+    background-color: none;
+    padding: 5px 15px;
+}
+
+.maincontainer{
+    display: flex;
+    padding-top: 15px;
+    width: 98vw;    
+    justify-content: center;
+}
+
+.logo{
+    width: 61px;
+    height: 50px;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    background-color: white;
+    width: 98vw;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    border-radius: 0 10px 10px 0;
+}
+
+.mid{
+    display: flex;
+    position: absolute;
+    width: 98vw;
+    height: 100vh;
+    justify-content: center;
+    top: 72px;
+    padding-bottom: 5.3rem;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    justify-content: center;
+    width:  98vw;
+
+    grid-template-areas: 
+    "grid-item1 grid-item1 grid-item2"
+    "grid-item1 grid-item1 grid-item4"
+    "grid-item3 grid-item3 grid-item3";
+}
+
+.grid-item1, .grid-item2, .grid-item3, .grid-item4{
+    border-radius: 10px;
+}
+
+.grid-item1{
+    background-color: none;
+    grid-area: grid-item1;
+    
+}
+
+div.grid-item1 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  }
+  
+  div.grid-item1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+#video{
+    width: 100%; 
+    height:100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.grid-item2{
+    display: flex;
+    justify-content: space-around;
+    background-color: #4285f4;
+    padding: 0 1rem 0 1rem;
+    align-items: center;
+    grid-area: grid-item2;
+    color: white;
+}
+
+#hostnames{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+
+.grid-item3{
+    background-color: black;
+    border: solid #34a853 1px;
+    padding: 0 1rem 0 1rem;
+    grid-area: grid-item3;
+    color: white;
+}
+
+p{
+    font-size: 20px;
+}
+
+.mainheader{
+    color: #34a853;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+
+.grid-item4{
+    display: flex;
+    background-color: #ea4335;
+    padding: 0 1rem 0 1rem;
+    align-items: center;
+    grid-area: grid-item4;
+    
+}
+
+.logo21{
+    animation: changecolor 5.3s infinite linear;
+}
+
+.episodes a:hover, .about a:hover, .contact a:hover{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+    @media (max-width: 768px) {
+
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+        -webkit-user-drag: none;
+        outline: none;
+    }
+    body{
+        overflow:scroll;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        background-color: none;
+        justify-content: center;
+        height: 100vh;
+        }
+
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "grid-item1"
+        "grid-item2"
+        "grid-item4"
+        "grid-item3";
+        ;
+        justify-content: center;
+    }
+
+    .grid-item1{
+        grid-area: span grid-item1;
+        
+    }
+
+    .grid-item2{
+        grid-area: grid-item2;
+        
+    }
+
+    .grid-item3{
+        grid-area: grid-item3;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .hostnames{
+        font-size: 1.5rem;
+    }
+
+    .mainheader{
+        font-size: 1.5rem;
+    }
+
+    .grid-item4{
+        grid-area: grid-item4;
+        
+    }
+
+
+    /* pages */
+
+    .menu{
+        display: flex;
+        background-color: white;
+        width: 98vw;
+        height: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .episodes a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 5px 15px;
+    }
+    
+    .about a, .contact a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        color: black;
+        background-color: none;
+        padding: 5px 15px;
+    }
+
+}
+
+/* Style for the dropdown menu */
+#video-select {
+    font-family: electrolize;
+    font-weight: 600;
+    width: 13rem; /* Set the width of the dropdown */
+    padding: 15px; /* Add some padding */
+    font-size: 16px; /* Set the font size */
+    border: none;
+    border-radius: 10px; /* Add border radius */
+    appearance: none; /* Remove default arrow in some browsers */
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    background-color: #fbbc05; /* Set background color */
+    position: relative; /* Position relative for dropdown arrow */
+  }
+  
+  /* Style for dropdown arrow */
+  .custom-select::after {
+    content: '\25BC'; /* Unicode character for arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow is not clickable */
+  }
+  
+  /* Style for selected option */
+  .custom-select option:checked {
+    background-color: #fff; /* Change background color of selected option */
+  }
+
+  @keyframes changecolor{
+
+    0%, 94.3% {
+        fill: white; /* Start with white 5 seconds */
+    }
+    94.4%, 96.2% {
+        fill: red; /* Change to red */
+    }
+
+    96.3%, 98.1% {
+        fill: orange; /* Change to orange */
+    }
+
+    98.2%, 100%{
+        fill: green; /* Change to green */
+    }
+}
+  
